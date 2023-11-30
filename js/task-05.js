@@ -1,8 +1,9 @@
-const nameInput = document.querySelector("#name-input");
-//console.log(nameInput);
-const nameOutput = document.querySelector("#name-output");
-//console.log(nameOutput);
+let nameInput = document.getElementById('name-input');
+let nameOutput = document.getElementById('name-output');
 
-nameInput.addEventListener("input", event => {
-  nameOutput.textContent = event.currentTarget.value || "Anonymous";
-});
+const inputHandler = (e) =>{
+let value = e.target.value;
+nameOutput.textContent = value||"Anonymous";   
+};
+
+nameInput.addEventListener('input', inputHandler);
